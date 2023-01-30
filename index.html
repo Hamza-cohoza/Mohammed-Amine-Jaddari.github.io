@@ -480,6 +480,7 @@ function callMosquesApi()
 {
     if(city1LatLong!=undefined && city2LatLong!=undefined)
    {
+     consol.log(city1LatLong[1]);
     url='https://api.opentripmap.com/0.1/ru/places/bbox?lon_min='+city1LatLong[1]+'&lat_min='+city1LatLong[0]+'&lon_max='+city2LatLong[1]+'&lat_max='+city2LatLong[0]+'&kinds=mosques&format=geojson&apikey=5ae2e3f221c38a28845f05b642e507377e5261594474e70db33f4cf4'
 
     fetch(url).then(r=>r.json()).then(x=>FindMosques(x))
